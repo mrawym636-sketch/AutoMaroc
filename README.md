@@ -6,38 +6,50 @@
 [![InfinityFree](https://img.shields.io/badge/Host-InfinityFree-purple)](https://infinityfree.com)
 [![Gemini](https://img.shields.io/badge/AI-Google%20Gemini-blue)](https://ai.google.dev/)
 
-**AutoMaroc** est une plateforme e-commerce dédiée à la vente de voitures d'occasion au Maroc. Le projet comprend une boutique, un panier, une liste de souhaits, l'authentification des utilisateurs, les commandes, les avis clients, un chatbot IA et des outils de gestion.
+**AutoMaroc** est une plateforme e-commerce dédiée à la vente de voitures d'occasion au Maroc.
+Le projet comprend une boutique, un panier, une liste de souhaits, l'authentification des utilisateurs, les commandes, les avis clients, un chatbot IA et des outils de gestion complets.
+
+---
 
 ## 🚀 Démo
 
-- **Site client :** [automaroc.great-site.net](http://automaroc.great-site.net/pages/home.php)
-- **Espace administrateur :** [Connexion](http://automaroc.great-site.net/admin/login.php)
+- **Site client :** [http://automaroc.great-site.net/pages/home.php](http://automaroc.great-site.net/pages/home.php)
+- **Espace admin :** [http://automaroc.great-site.net/admin/login.php](http://automaroc.great-site.net/admin/login.php)
+  - **Email :** `admin@admin.com`
+  - **Mot de passe :** `admin123`
 
-> ⚠️ Les identifiants de démonstration ne sont pas publiés dans ce dépôt. Ne déployez jamais de compte administrateur avec un mot de passe par défaut ou partagé. Utilisez des identifiants forts et uniques.
+> ⚠️ **Sécurité :** Ces identifiants sont fournis pour la démonstration. Changez-les avant tout déploiement en production.
+
+---
 
 ## ✨ Fonctionnalités
 
 - 📦 Catalogue de véhicules avec catégories et marques
-- 🔍 Recherche et pages de détails des véhicules
+- 🔍 Recherche et pages de détails véhicule
 - 🛒 Panier avec ajout, modification des quantités et suppression
 - ❤️ Liste de souhaits
 - 👤 Inscription, connexion et profil utilisateur
 - 📦 Passage de commande et historique des commandes
-- ⭐ Avis et système de notation
+- ⭐ Avis et système de notation (étoiles)
 - 📞 Formulaire de contact et newsletter
 - 🤖 Chatbot d'assistance en français, arabe/darija et anglais
 - 📱 Mise en page responsive
-- 🛠️ Tableau de bord administrateur : véhicules, stocks, commandes, utilisateurs, avis, paramètres et analyses
+- 🛠️ Tableau de bord admin complet (véhicules, stocks, commandes, utilisateurs, avis, paramètres, analyses)
+
+---
 
 ## 🛠️ Technologies
 
 - **Backend :** PHP avec PDO
 - **Base de données :** MySQL ou MariaDB
 - **Frontend :** HTML, CSS et JavaScript
+- **Interface :** CSS personnalisé responsive
 - **Icônes et polices :** Font Awesome et Google Fonts
 - **Graphiques :** Chart.js
 - **Tableaux :** DataTables
 - **Chatbot :** Google Gemini API
+
+---
 
 ## 📁 Structure du projet
 
@@ -49,16 +61,75 @@ automaroc/
 │   ├── js/
 │   └── uploads/
 ├── pages/                  # Pages de la boutique
+│   ├── home.php
+│   ├── products.php
+│   ├── product-details.php
+│   ├── cart.php
+│   ├── checkout.php
+│   ├── orders.php
+│   ├── order-details.php
+│   ├── wishlist.php
+│   ├── profile.php
+│   ├── login.php
+│   ├── register.php
+│   ├── about.php
+│   ├── review.php
+│   ├── contact.php
+│   └── install.php
 ├── php_files/              # Configuration et traitements PHP
+│   ├── config.php
+│   ├── login.php
+│   ├── register.php
+│   ├── add_to_cart.php
+│   ├── get_cart.php
+│   ├── update_cart.php
+│   ├── remove_cart.php
+│   ├── checkout.php
+│   ├── add_review.php
+│   ├── get_reviews.php
+│   ├── chatbot.php
+│   └── contact.php
 ├── admin/                  # Espace administrateur
+│   ├── index.php
+│   ├── login.php
+│   ├── auth.php
+│   ├── config.php
+│   ├── header.php
+│   ├── footer.php
+│   ├── products.php
+│   ├── product-add.php
+│   ├── product-edit.php
+│   ├── categories.php
+│   ├── brands.php
+│   ├── orders.php
+│   ├── order-details.php
+│   ├── users.php
+│   ├── crud_users.php
+│   ├── reviews.php
+│   ├── coupons.php
+│   ├── newsletter.php
+│   ├── analytics.php
+│   ├── inventory.php
+│   ├── logs.php
+│   ├── pages.php
+│   ├── settings.php
+│   ├── blacklist.php
+│   ├── export_orders.php
+│   ├── export_products.php
+│   ├── export_users.php
+│   ├── export_reviews.php
+│   ├── backup.php
+│   ├── logout.php
+│   └── create_admin.php
 ├── index.php
 ├── header.php
 ├── footer.php
-├── khalid.sql              # Script de création de la base de données
-└── README.md
+├── auto maroc.sql              # Script de création de la base de données
+├── README.md
+└── ...
 ```
 
-Les pages et traitements PHP incluent notamment le catalogue, les détails d'un véhicule, le panier, le paiement, les commandes, le profil, l'authentification, les avis et le chatbot. L'espace d'administration permet la gestion du catalogue, des commandes, des utilisateurs et des paramètres.
+---
 
 ## ⚙️ Prérequis
 
@@ -66,10 +137,12 @@ Les pages et traitements PHP incluent notamment le catalogue, les détails d'un 
 - MySQL ou MariaDB
 - Apache, Nginx ou un serveur PHP local (par exemple XAMPP)
 - Extension PHP PDO MySQL
-- Extension cURL pour le chatbot
+- Extension cURL (pour le chatbot)
 - Extension GD si vous utilisez les fonctions de génération d'images
 
 Composer n'est actuellement pas requis.
+
+---
 
 ## 🚀 Installation locale
 
@@ -80,7 +153,7 @@ git clone https://github.com/mrawym636-sketch/automaroc.git
 cd automaroc
 ```
 
-### 2. Placer le projet dans le dossier web
+### 2. Placer dans le dossier web
 
 Avec XAMPP :
 
@@ -94,15 +167,13 @@ Avec un serveur Linux :
 /var/www/html/automaroc
 ```
 
-### 3. Créer et importer la base de données
-
-Créer la base de données :
+### 3. Créer la base de données
 
 ```sql
 CREATE DATABASE auto_maroc_db CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
-Importer ensuite `khalid.sql` avec phpMyAdmin ou en ligne de commande :
+Puis importer le fichier `khalid.sql` via phpMyAdmin ou en ligne de commande :
 
 ```bash
 mysql -u root -p auto_maroc_db < khalid.sql
@@ -110,7 +181,7 @@ mysql -u root -p auto_maroc_db < khalid.sql
 
 ### 4. Configurer l'accès à MySQL
 
-Dans `php_files/config.php`, renseigner les paramètres locaux de la base :
+Modifier `php_files/config.php` :
 
 ```php
 $host = 'localhost';
@@ -118,8 +189,6 @@ $dbname = 'auto_maroc_db';
 $username = 'root';
 $password = '';
 ```
-
-Adaptez ces valeurs à votre environnement. Ne commitez pas de mots de passe ni de clés API.
 
 ### 5. Démarrer le site
 
@@ -129,16 +198,39 @@ Démarrer Apache et MySQL, puis ouvrir :
 http://localhost/automaroc/
 ```
 
+---
+
 ## ☁️ Déploiement sur InfinityFree
 
-1. Dans le cPanel, créer une base de données et un utilisateur, puis attribuer à celui-ci les privilèges requis.
-2. Configurer les paramètres de connexion dans `php_files/config.php` avec les informations fournies par l'hébergeur.
-3. Importer `khalid.sql` dans la base via phpMyAdmin.
-4. Téléverser les fichiers du projet dans `htdocs/` et vérifier les permissions nécessaires pour `assets/uploads/`.
-5. Configurer les secrets, notamment la clé API Gemini, hors du contrôle de version.
-6. Accéder au site depuis son domaine.
+### 1. Créer la base de données
+Aller dans cPanel → MySQL Databases.
 
-> Les noms d'hôtes, identifiants et paramètres de base de données varient selon le compte d'hébergement. Consultez le panneau de contrôle de l'hébergeur plutôt que de reprendre des exemples d'identifiants.
+Créer une base (ex. `if0_43357943_automaroc`), créer un utilisateur et lui donner tous les privilèges.
+
+### 2. Configurer `php_files/config.php`
+
+```php
+$host = 'sqlXXX.infinityfree.com';
+$dbname = 'if0_43357943_automaroc';
+$username = 'if0_43357943';
+$password = 'VOTRE_MOT_DE_PASSE';
+```
+
+### 3. Importer la base de données
+Aller dans phpMyAdmin d'InfinityFree, sélectionner la base et importer `khalid.sql`.
+
+### 4. Téléverser les fichiers
+Uploader le contenu du projet dans `htdocs/`.
+
+Vérifier que `assets/uploads/` est accessible en écriture (755).
+
+### 5. Accéder au site
+
+```text
+http://automaroc.great-site.net/pages/home.php
+```
+
+---
 
 ## 🗄️ Base de données
 
@@ -162,20 +254,48 @@ Le code utilise notamment les tables suivantes :
 | `coupons` | Codes promo |
 | `settings` | Paramètres généraux |
 
-Le script de création de la base de données se trouve dans [`khalid.sql`](khalid.sql).
+Voir `khalid.sql` à la racine du dépôt.
+
+---
+
+## 🔑 Compte administrateur
+
+| Email | Mot de passe | Rôle |
+| --- | --- | --- |
+| `admin@admin.com` | `admin123` | `Admin` |
+
+Créer un admin en SQL :
+
+```sql
+INSERT INTO utilisateurs (nom, email, password, role, photo) 
+VALUES (
+    'Administrateur',
+    'admin@admin.com',
+    '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+    'admin',
+    'default.png'
+);
+```
+
+---
 
 ## 🎮 Utilisation
 
-En local :
+### Client
 
 ```text
-Boutique : http://localhost/automaroc/
-Administration : http://localhost/automaroc/admin/login.php
+http://localhost/automaroc/
+http://automaroc.great-site.net/pages/home.php
 ```
 
-Pages d'administration principales :
+### Admin
 
-| Page | URL relative |
+```text
+http://localhost/automaroc/admin/login.php
+http://automaroc.great-site.net/admin/login.php
+```
+
+| Page | URL |
 | --- | --- |
 | Dashboard | `admin/index.php` |
 | Véhicules | `admin/products.php` |
@@ -185,15 +305,18 @@ Pages d'administration principales :
 | Paramètres | `admin/settings.php` |
 | Analyses | `admin/analytics.php` |
 
+---
+
 ## 🔐 Sécurité
 
 - Utilisez des mots de passe forts et uniques pour les comptes et la base de données.
-- Changez tout identifiant par défaut ou de démonstration avant le déploiement.
-- Ne commitez ni secrets, ni clés API, ni sauvegardes contenant des données personnelles.
+- Changez les identifiants par défaut ou de démonstration avant le déploiement.
+- Ne commitez ni secrets, ni sauvegardes contenant des données personnelles.
 - Limitez l'accès aux scripts d'administration, d'installation, de diagnostic et de sauvegarde.
 - Vérifiez les contrôles d'accès et la configuration du serveur avant toute mise en production.
-- Protégez les fichiers de configuration et secrets (notamment la clé API Gemini) contre tout accès web direct.
-- Utilisez HTTPS pour le site déployé.
+- Protégez `php_files/.env` (clé API Gemini) via `.htaccess`.
+
+---
 
 ## 🤝 Contribution
 
@@ -202,16 +325,21 @@ Pages d'administration principales :
 3. Commitez vos changements.
 4. Poussez votre branche et ouvrez une Pull Request.
 
+---
+
 ## 📄 Licence
 
-Aucun fichier de licence n'a été identifié dans le dépôt. Contactez le propriétaire du projet pour connaître les conditions de réutilisation.
+Aucun fichier de licence n'a été identifié dans le dépôt.
+Contactez le propriétaire du projet pour connaître les conditions de réutilisation.
+
+---
 
 ## 📬 Contact
 
-- **Email :** mrawym636@gmail.com
-- **WhatsApp :** +212 723-699031
+- **Email :** `mrawym636@gmail.com`
+- **WhatsApp :** `+212 723-699031`
 - **Localisation :** Casablanca, Maroc
-- **GitHub :** [@mrawym636-sketch](https://github.com/mrawym636-sketch)
+- **GitHub :** `@mrawym636-sketch`
 
 Pour toute question, ouvrez une issue dans ce dépôt ou contactez le mainteneur via GitHub.
 
